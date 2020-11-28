@@ -32,6 +32,16 @@ Route::group(['prefix' => 'member', 'namespace' => 'Ecommerce'], function() {
     Route::group(['middleware' => 'customer'], function() {
         Route::get('dashboard', 'LoginController@dashboard')->name('customer.dashboard');
         Route::get('logout', 'LoginController@logout')->name('customer.logout');
+
+        Route::get('orders', 'OrderController@index')->name('customer.orders');
+        Route::get('orders/{invoice}', 'OrderController@view')->name('customer.view_order');
+        Route::get('orders/pdf/{invoice}', 'OrderController@pdf')->name('customer.order_pdf');
+
+        Route::get('payment', 'OrderController@paymentForm')->name('customer.paymentForm');
+        Route::post('payment', 'OrderController@storePayment')->name('customer.savePayment');
+
+        Route::get('setting', 'FrontController@customerSettingForm')->name('customer.settingForm');
+        Route::post('setting', 'FrontController@customerUpdateProfile')->name('customer.setting');
     });
 });
 
@@ -42,4 +52,12 @@ Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
     
     Route::resource('category', 'CategoryController')->except(['create', 'show']);
     Route::resource('product', 'ProductController');
+
+    Route::group(['prefix' => 'orders'], function() {
+        Route::get('/', 'OrderController@index')->name('orders.index');
+        Route::delete('/{id}', 'OrderController@destroy')->name('orders.destroy');
+        Route::get('/{invoice}', 'OrderController@view')->name('orders.view');
+        Route::get('/payment/{invoice}', 'OrderController@acceptPayment')->name('orders.approve_payment');
+        Route::post('/shipping', 'OrderController@shippingOrder')->name('orders.shipping');
+    });
 });
