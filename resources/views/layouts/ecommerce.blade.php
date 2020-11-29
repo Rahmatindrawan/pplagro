@@ -42,7 +42,7 @@
 		<div class="top_menu row m0">
 			<div class="container-fluid">
 				<div class="float-left">
-					<p></p>
+					<p>Hubungi Kami : (0338) 678 202</p>
 				</div>
 				<div class="float-right">
 					<ul class="right_side">

@@ -6,7 +6,6 @@
 
 @section('content')
     <!--================Home Banner Area =================-->
-	<section class="home_banner_area" src="{{ asset('assets/img/avatars/logo1.png') }}">
 		<div class="overlay"></div>
 		<div class="banner_inner d-flex align-items-center">
 			<div class="container">
@@ -29,7 +28,6 @@
 				<div class="row">
 					<div class="main_title">
 						<h2>Produk Terbaru</h2>
-						<p>Tampil trendi dengan kumpulan produk kekinian kami.</p>
 					</div>
 				</div>
 				<div class="row">

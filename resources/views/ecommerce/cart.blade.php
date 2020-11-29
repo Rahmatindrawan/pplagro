@@ -13,7 +13,7 @@
 					<h2>Keranjang Belanja</h2>
 					<div class="page_link">
                         <a href="{{ url('/') }}">Home</a>
-                        <a href="{{ route('front.list_cart') }}">Cart</a>
+                        <a href="{{ route('front.list_cart') }}">Keranjang Belanja</a>
 					</div>
 				</div>
 			</div>
@@ -31,9 +31,9 @@
 					<table class="table">
 						<thead>
 							<tr>
-								<th scope="col">Product</th>
-								<th scope="col">Price</th>
-								<th scope="col">Quantity</th>
+								<th scope="col">Produk</th>
+								<th scope="col">Harga</th>
+								<th scope="col">Jumlah</th>
 								<th scope="col">Total</th>
 							</tr>
 						</thead>

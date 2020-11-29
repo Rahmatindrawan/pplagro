@@ -120,7 +120,7 @@
 									</a>
 								</li>
 							</ul>
-              <button class="main_btn">Bayar Pesanan</button>
+              <button class="main_btn">Buat Pesanan</button>
               </form>
 						</div>
 					</div>

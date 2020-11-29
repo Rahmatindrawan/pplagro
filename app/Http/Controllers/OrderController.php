@@ -11,10 +11,14 @@ class OrderController extends Controller
 {
     public function index()
     {
+        //QUERY UNTUK MENGAMBIL SEMUA PESANAN DAN LOAD DATA YANG BERELASI MENGGUNAKAN EAGER LOADING
+        //DAN URUTANKAN BERDASARKAN CREATED_AT
         $orders = Order::with(['customer.district.city.province'])
             ->orderBy('created_at', 'DESC');
     
+        //JIKA Q UNTUK PENCARIAN TIDAK KOSONG
         if (request()->q != '') {
+            //MAKA DIBUAT QUERY UNTUK MENCARI DATA BERDASARKAN NAMA, INVOICE DAN ALAMAT
             $orders = $orders->where(function($q) {
                 $q->where('customer_name', 'LIKE', '%' . request()->q . '%')
                 ->orWhere('invoice', 'LIKE', '%' . request()->q . '%')
@@ -22,11 +26,13 @@ class OrderController extends Controller
             });
         }
     
+        //JIKA STATUS TIDAK KOSONG 
         if (request()->status != '') {
+            //MAKA DATA DIFILTER BERDASARKAN STATUS
             $orders = $orders->where('status', request()->status);
         }
-        $orders = $orders->paginate(10);
-        return view('orders.index', compact('orders'));
+        $orders = $orders->paginate(10); //LOAD DATA PER 10 DATA
+        return view('orders.index', compact('orders')); //LOAD VIEW INDEX DAN PASSING DATA TERSEBUT
     }
 
     public function destroy($id)

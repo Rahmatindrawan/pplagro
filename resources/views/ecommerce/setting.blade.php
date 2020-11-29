@@ -1,7 +1,7 @@
 @extends('layouts.ecommerce')
 
 @section('title')
-    <title>Pengaturan</title>
+    <title>Edit Profil</title>
 @endsection
 
 @section('content')
@@ -10,10 +10,10 @@
 		<div class="banner_inner d-flex align-items-center">
 			<div class="container">
 				<div class="banner_content text-center">
-					<h2>Pengaturan</h2>
+					<h2>Edit Profil</h2>
 					<div class="page_link">
               <a href="{{ url('/') }}">Home</a>
-              <a href="{{ route('customer.settingForm') }}">Pengaturan</a>
+              <a href="{{ route('customer.settingForm') }}">Edit Profil</a>
 					</div>
 				</div>
 			</div>

@@ -35,7 +35,7 @@
                     @endif
 
 					<div class="login_form_inner">
-						<h3>Log in to enter</h3>
+						<h3>Log in</h3>
                         <form class="row login_form" action="{{ route('customer.post_login') }}" method="post" id="contactForm" novalidate="novalidate">
                             @csrf
 							<div class="col-md-12 form-group">
@@ -52,7 +52,7 @@
 							</div>
 							<div class="col-md-12 form-group">
 								<button type="submit" value="submit" class="btn submit_btn">Log In</button>
-								<a href="#">Forgot Password?</a>
+								<a href="#"></a>
 							</div>
 						</form>
 					</div>

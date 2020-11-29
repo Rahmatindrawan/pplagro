@@ -135,7 +135,7 @@
                             <td>
                                 <strong>PENGIRIM</strong><br>
                                 VegeBox<br>
-                                089999999999<br>
+                                (0338) 678 202<br>
                                 Jl Mastrip Timur<br>
                                 Sumbersari, Jember<br>
                                 Jawa Timur
