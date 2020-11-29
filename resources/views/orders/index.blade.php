@@ -29,7 +29,6 @@
                                 <div class="alert alert-danger">{{ session('error') }}</div>
                             @endif
 
-                          	<!-- FORM UNTUK FILTER DAN PENCARIAN -->
                             <form action="{{ route('orders.index') }}" method="get">
                                 <div class="input-group mb-3 col-md-6 float-right">
                                     <select name="status" class="form-control mr-3">
@@ -46,9 +45,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <!-- FORM UNTUK FILTER DAN PENCARIAN -->
                           
-                          	<!-- TABLE UNTUK MENAMPILKAN DATA ORDER -->
                             <div class="table-responsive">
                                 <table class="table table-hover table-bordered">
                                     <thead>
