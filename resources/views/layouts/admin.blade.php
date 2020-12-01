@@ -27,7 +27,7 @@
 
     <footer class="app-footer">
         <div>
-            <a href="https://coreui.io">Daengweb</a>
+            <a href="https://coreui.io">VegeBox</a>
             <span>&copy; 2018 creativeLabs.</span>
         </div>
         <div class="ml-auto">
