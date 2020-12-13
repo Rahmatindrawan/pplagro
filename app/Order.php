@@ -19,7 +19,7 @@ class Order extends Model
         if ($this->status == 0) {
             return '<span class="badge badge-secondary">Baru</span>';
         } elseif ($this->status == 1) {
-            return '<span class="badge badge-primary">Dikonfirmasi</span>';
+            return '<span class="badge badge-primary">Menunggu Konfirmasi</span>';
         } elseif ($this->status == 2) {
             return '<span class="badge badge-info">Proses</span>';
         } elseif ($this->status == 3) {

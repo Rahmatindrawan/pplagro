@@ -13,10 +13,10 @@
 	<link href="{{ asset('assets/vendors/pace-progress/css/pace.min.css') }}" rel="stylesheet">
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
-    @include('layouts.admin.header')
+    @include('layouts.module.header')
     <div class="app-body" id="dw">
         <div class="sidebar">
-            @include('layouts.admin.sidebar')
+            @include('layouts.module.sidebar')
             <button class="sidebar-minimizer brand-minimizer" type="button"></button>
         </div>
         @yield('content')

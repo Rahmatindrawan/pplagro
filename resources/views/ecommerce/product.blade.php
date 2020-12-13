@@ -45,7 +45,6 @@
                     </div>
                     <div class="latest_product_inner row">
                       
-                      	<!-- PROSES LOOPING DATA PRODUK, SAMA DENGAN CODE YANG ADDA DIHALAMAN HOME -->
                         @forelse ($products as $row)
                         <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="f_p_item">
@@ -68,7 +67,6 @@
                             <h3 class="text-center">Tidak ada produk</h3>
                         </div>
                         @endforelse
-                      <!-- PROSES LOOPING DATA PRODUK, SAMA DENGAN CODE YANG ADDA DIHALAMAN HOME -->
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -80,13 +78,10 @@
                             <div class="widgets_inner">
                                 <ul class="list">
                                   
-                                  	<!-- PROSES LOOPING DATA KATEGORI -->
                                     @foreach ($categories as $category)
                                     <li>
-                                        <!-- JIKA CHILDNYA ADA, MAKA KATEGORI INI AKAN MENG-EXPAND DATA DIBAWAHNYA -->
                                         <strong><a href="{{ url('/category/' . $category->slug) }}">{{ $category->name }}</a></strong>
                                         
-                                      	<!-- PROSES LOOPING DATA CHILD KATEGORI -->
                                         @foreach ($category->child as $child)
                                         <ul class="list" style="display: block">
                                             <li>
@@ -103,7 +98,6 @@
                 </div>
             </div>
 
-          	<!-- GENERATE PAGINATION PRODUK -->
             <div class="row">
                 {{ $products->links() }}
             </div>

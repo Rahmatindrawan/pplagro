@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.petani')
 
 @section('title')
     <title>Tambah Produk</title>
@@ -72,6 +72,7 @@
                                 </div>
                                 <div class="form-group">
                                     <button class="btn btn-primary btn-sm">Tambah</button>
+                                    <a href="{{ route('product.index') }}" class="btn btn-danger btn-sm">Batal</a>
                                 </div>
                             </div>
                         </div>

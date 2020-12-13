@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.petani')
 
 @section('title')
     <title>List Product</title>
@@ -50,10 +50,10 @@
                                 <table class="table table-hover table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>Foto</th>
                                             <th>Produk</th>
                                             <th>Harga</th>
-                                            <th>Created At</th>
+                                            <th>Tanggal Dibuat</th>
                                             <th>Status</th>
                                             <th>Aksi</th>
                                         </tr>

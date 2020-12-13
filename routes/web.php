@@ -62,3 +62,9 @@ Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
         Route::post('/shipping', 'OrderController@shippingOrder')->name('orders.shipping');
     });
 });
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::resource('edukasi', 'EdukasiController');
+});

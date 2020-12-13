@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.petani')
 
 @section('title')
     <title>Daftar Pesanan</title>
@@ -75,7 +75,7 @@
                                                     @csrf
                                                     @method('DELETE')
                                                     <a href="{{ route('orders.view', $row->invoice) }}" class="btn btn-warning btn-sm">Lihat</a>
-                                                    <button class="btn btn-danger btn-sm">Hapus</button>
+                                                    <button class="btn btn-danger btn-sm">Batal</button>
                                                 </form>
                                             </td>
                                         </tr>

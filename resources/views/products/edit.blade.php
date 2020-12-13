@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.petani')
 
 @section('title')
     <title>Edit Produk</title>

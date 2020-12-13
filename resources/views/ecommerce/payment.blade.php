@@ -87,7 +87,7 @@
                             <p class="text-danger">{{ $errors->first('proof') }}</p>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-primary btn-sm">Konfirmasi</button>
+                            <button class="btn btn-primary btn-sm" href="{{ route('customer.orders') }}">Konfirmasi</button>
                         </div>
                     </form>
 								</div>
