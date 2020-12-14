@@ -1,4 +1,4 @@
-@extends('layouts.petani')
+@extends('layouts.admin')
 
 @section('title')
     <title>Dashboard</title>

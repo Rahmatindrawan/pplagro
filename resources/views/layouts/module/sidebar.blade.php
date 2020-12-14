@@ -6,7 +6,7 @@
             </a>
         </li>
 
-        <li class="nav-title">MANAJEMEN PRODUK</li>
+        <li class="nav-title">FITUR PETANI</li>
         {{-- <li class="nav-item">
             <a class="nav-link" href="{{ route('category.index') }}">
                 <i class="nav-icon icon-drop"></i> Kategori
@@ -24,12 +24,12 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">
-                <i class="nav-icon icon-drop"></i> Rekomendasi
+                <i class="nav-icon icon-drop"></i> Edukasi
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">
-                <i class="nav-icon icon-drop"></i> Edukasi
+                <i class="nav-icon icon-drop"></i> Rekomendasi
             </a>
         </li>
     </ul>

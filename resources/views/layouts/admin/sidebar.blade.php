@@ -13,7 +13,7 @@
             </a>
         </li> --}}
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('edukasi.index') }}">
+            <a class="nav-link" href="{{ route('posts.index') }}">
                 <i class="nav-icon icon-drop"></i> Edukasi
             </a>
         </li>

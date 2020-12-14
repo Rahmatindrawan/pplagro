@@ -50,7 +50,10 @@ Auth::routes();
 
 Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
     Route::get('/home', 'HomeController@index')->name('home'); 
-    
+
+    Route::resource('posts', 'PostsController');
+    Route::resource('view', 'ViewController');
+
     Route::resource('category', 'CategoryController')->except(['create', 'show']);
     Route::resource('product', 'ProductController');
 
@@ -64,7 +67,7 @@ Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home', 'AdminController@index')->name('home');
 
-    Route::resource('edukasi', 'EdukasiController');
+    Route::resource('posts', 'PostsController');
 });
