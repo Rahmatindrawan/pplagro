@@ -21,7 +21,7 @@
                     </h4>
                 </div>
                 <div class="card-body">
-                    <a href="{{ route('posts.create') }}" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH ARTIKEL</a>
+                    <a href="{{ route('posts.create') }}" class="btn btn-md btn-success" style="margin-bottom: 10px">Tambah Artikel</a>
                     <div class="table-responsive">
                         <table class="table table-hover table-bordered">
                         <thead>

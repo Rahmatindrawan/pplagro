@@ -53,6 +53,7 @@ Auth::routes();
 Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
     Route::get('/home', 'HomeController@index')->name('home'); 
     Route::get('posts', 'HomeController@show')->name('posts.view'); 
+    Route::get('recom', 'HomeController@view')->name('recom.view'); 
 
     Route::resource('category', 'CategoryController')->except(['create', 'show']);
     Route::resource('product', 'ProductController');
@@ -70,4 +71,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/home', 'AdminController@index')->name('home');
 
     Route::resource('posts', 'PostsController');
+    Route::get('recom', 'RecomController@index')->name('recom.index'); 
 });

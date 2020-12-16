@@ -7,11 +7,11 @@
         </li>
 
         <li class="nav-title">FITUR PETANI</li>
-        {{-- <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('category.index') }}">
                 <i class="nav-icon icon-drop"></i> Kategori
             </a>
-        </li> --}}
+        </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('product.index') }}">
                 <i class="nav-icon icon-drop"></i> Produk
@@ -28,7 +28,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('recom.view') }}">
                 <i class="nav-icon icon-drop"></i> Rekomendasi
             </a>
         </li>

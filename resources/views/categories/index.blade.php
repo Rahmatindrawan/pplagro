@@ -1,5 +1,4 @@
-<!-- MEMANGGIL MASTER TEMPLATE YANG SUDAH DIBUAT SEBELUMNYA, YAKNI admin.blade.php -->
-@extends('layouts.admin')
+@extends('layouts.petani')
 
 @section('title')
     <title>List Kategori</title>
@@ -51,7 +50,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- BAGIAN INI AKAN MENG-HANDLE FORM INPUT NEW CATEGORY  -->
               
                 <!-- BAGIAN INI AKAN MENG-HANDLE TABLE LIST CATEGORY  -->
                 <div class="col-md-8">
@@ -116,12 +114,10 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <!-- FUNGSI INI AKAN SECARA OTOMATIS MEN-GENERATE TOMBOL PAGINATION  -->
                             {!! $category->links() !!}
                         </div>
                     </div>
                 </div>
-                <!-- BAGIAN INI AKAN MENG-HANDLE TABLE LIST CATEGORY  -->
             </div>
         </div>
     </div>

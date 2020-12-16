@@ -32,4 +32,9 @@ class HomeController extends Controller
         $posts = Post::latest()->get();
         return view('posts.view', compact('posts'));
     }
+
+    public function view()
+    {
+        return view('recom.view', compact('recom'));
+    }
 }
