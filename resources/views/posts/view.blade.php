@@ -1,7 +1,7 @@
 @extends('layouts.petani')
 
 @section('title')
-    <title>Artikel</title>
+    <title>Petani - Artikel</title>
 @endsection
 
 @section('content')
@@ -21,7 +21,6 @@
                     </h4>
                 </div>
                 <div class="card-body">
-                    <a href="{{ route('posts.create') }}" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH ARTIKEL</a>
                     <div class="table-responsive">
                         <table class="table table-hover table-bordered">
                         <thead>
@@ -32,6 +31,13 @@
                         </thead>
                         <tbody>
 
+                            @foreach($posts as $post)
+                            <tr>
+                                <td>{!! $post->title !!}</td>
+                                <td>{!! $post->content !!}</td>
+                            </tr>
+                            @endforeach
+                            
                         </tbody>
                         </table>
                     </div>

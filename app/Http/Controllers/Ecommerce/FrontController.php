@@ -8,6 +8,7 @@ use App\Product;
 use App\Category;
 use App\Customer;
 use App\Province;
+use App\Post;
 
 class FrontController extends Controller
 {
@@ -72,5 +73,11 @@ class FrontController extends Controller
         }
         $user->update($data);
         return redirect()->back()->with(['success' => 'Profil berhasil diperbaharui']);
+    }
+
+    public function view()
+    {
+        $posts = Post::latest()->get();
+        return view('ecommerce.view', compact('posts'));
     }
 }

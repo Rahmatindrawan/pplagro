@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    <title>Edit Artikel</title>
+    <title>Admin - Edit Artikel</title>
 @endsection
 
 @section('content')

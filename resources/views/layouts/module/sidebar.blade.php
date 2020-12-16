@@ -23,7 +23,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('posts.view') }}">
                 <i class="nav-icon icon-drop"></i> Edukasi
             </a>
         </li>
