@@ -64,7 +64,8 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div><br>
+			<a href="{{ route('customer.orders') }}" class="btn btn-md btn-success" style="margin-bottom: 10px">Lanjut Pembayaran</a>
 		</div>
 	</section>
   <!--================End Order Details Area =================-->

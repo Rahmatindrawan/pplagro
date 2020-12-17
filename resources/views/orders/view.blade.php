@@ -1,7 +1,7 @@
 @extends('layouts.petani')
 
 @section('title')
-    <title>Detail pesanan</title>
+    <title>Petani - Detail pesanan</title>
 @endsection
 
 @section('content')

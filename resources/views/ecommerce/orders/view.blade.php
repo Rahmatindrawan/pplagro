@@ -33,7 +33,7 @@
 						<div class="col-md-6">
 							<div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Data Pelanggan</h4>
+                    <h4 class="card-title">Detail Pelanggan</h4>
                 </div>
 				<div class="card-body">
 					<table>
@@ -56,6 +56,11 @@
                             <td>Alamat</td>
                             <td>:</td>
                             <th>{{ $order->customer_address }}, {{ $order->district->name }} {{ $order->district->city->name }}, {{ $order->district->city->province->name }}</th>
+                        </tr>
+                        <tr>
+                            <td>Nomor Resi</td>
+                            <td>:</td>
+                            <th>{{ $order->tracking_number }}</th>
                         </tr>
                     </table>
 								</div>
