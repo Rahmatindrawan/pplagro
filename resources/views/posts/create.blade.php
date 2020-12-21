@@ -29,13 +29,13 @@
                                 </div>
         
                                 <div class="form-group">
-                                    <label>Konten</label>
+                                    <label>Ulasan</label>
                                     <textarea class="form-control" name="content" placeholder="Masukkan Content" rows="4"></textarea>
                                 </div>
         
-                                <button type="submit" class="btn btn-success">SIMPAN</button>
-                                <button type="reset" class="btn btn-warning">RESET</button>
-        
+                                <button type="submit" class="btn btn-success">TAMBAH</button>
+                                {{-- <button type="reset" class="btn btn-danger">BATAL</button> --}}
+                                <a href="{{ route('posts.index') }}" class="btn btn-danger btn-sm">BATAL</a>
                             </form>
                         </div>
                     </div>

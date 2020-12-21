@@ -146,6 +146,23 @@
                                       @endforelse
                                   </tbody>
                               </table>
+                              <table>
+                                <tr>
+                                    <td>Subtotal</td>
+                                    <td>:</td>
+                                    <th>Rp {{ number_format($order->subtotal) }}</th>
+                                </tr>
+                                <tr>
+                                    <td>Ongkos Kirim</td>
+                                    <td>:</td>
+                                    <th>Rp 8000</th>
+                                </tr>
+                                <tr>
+                                    <td>Total Pembayaran</td>
+                                    <td>:</td>
+                                    <th>Rp {{ number_format($order->subtotal + 8000 ) }}</th>
+                                </tr>
+                            </table>
                           </div>
                       </div>
                   </div>

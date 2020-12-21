@@ -118,12 +118,12 @@
 								</li>
 								<li>
 									<a href="#">Pengiriman
-										<span>Rp 0</span>
+										<span>Rp 8000</span>
 									</a>
 								</li>
 								<li>
 									<a href="#">Total
-										<span>Rp {{ number_format($subtotal) }}</span>
+										<span>Rp {{ number_format($subtotal + 8000) }}</span>
 									</a>
 								</li>
 							</ul>

@@ -136,9 +136,8 @@ class CartController extends Controller
                 ]);
             }
     
-            //SIMPAN DATA ORDER
             $order = Order::create([
-                'invoice' => Str::random(4) . '-' . time(), //INVOICENYA KITA BUAT DARI STRING RANDOM DAN WAKTU
+                'invoice' => Str::random(4) . '-' . time(), 
                 'customer_id' => $customer->id,
                 'customer_name' => $customer->name,
                 'customer_phone' => $request->customer_phone,
@@ -147,11 +146,8 @@ class CartController extends Controller
                 'subtotal' => $subtotal
             ]);
     
-            //LOOPING DATA DI CARTS
             foreach ($carts as $row) {
-                //AMBIL DATA PRODUK BERDASARKAN PRODUCT_ID
                 $product = Product::find($row['product_id']);
-                //SIMPAN DETAIL ORDER
                 OrderDetail::create([
                     'order_id' => $order->id,
                     'product_id' => $row['product_id'],
@@ -161,21 +157,16 @@ class CartController extends Controller
                 ]);
             }
             
-            //TIDAK TERJADI ERROR, MAKA COMMIT DATANYA UNTUK MENINFORMASIKAN BAHWA DATA SUDAH FIX UNTUK DISIMPAN
             DB::commit();
     
             $carts = [];
-            //KOSONGKAN DATA KERANJANG DI COOKIE
             $cookie = cookie('dw-carts', json_encode($carts), 2880);
-            //REDIRECT KE HALAMAN FINISH TRANSAKSI
             if (!auth()->guard('customer')->check()) {
                 Mail::to($request->email)->send(new CustomerRegisterMail($customer, $password));
             }
             return redirect(route('front.finish_checkout', $order->invoice))->cookie($cookie);
         } catch (\Exception $e) {
-            //JIKA TERJADI ERROR, MAKA ROLLBACK DATANYA
             DB::rollback();
-            //DAN KEMBALI KE FORM TRANSAKSI SERTA MENAMPILKAN ERROR
             return redirect()->back()->with(['error' => $e->getMessage()]);
         }
     }

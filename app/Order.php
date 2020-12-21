@@ -42,4 +42,9 @@ class Order extends Model
     {
         return $this->belongsTo(Customer::class);
     }
+
+    public function getTotalAttribute()
+    {
+        return $this->subtotal + 8000;
+    }
 }

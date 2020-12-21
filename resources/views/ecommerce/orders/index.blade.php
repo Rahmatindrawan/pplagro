@@ -64,7 +64,7 @@
                                   <td><strong>{{ $row->invoice }}</strong></td>
                                   <td>{{ $row->customer_name }}</td>
                                   <td>{{ $row->customer_phone }}</td>
-                                  <td>{{ number_format($row->subtotal) }}</td>
+                                  <td>{{ number_format($row->subtotal+8000) }}</td>
                                   <td>{!! $row->status_label !!}</td>
                                   <td>{{ $row->created_at }}</td>
                                   <td>

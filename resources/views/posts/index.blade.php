@@ -27,7 +27,7 @@
                         <thead>
                             <tr>
                             <th>Judul</th>
-                            <th>Konten</th>
+                            <th>Ulasan</th>
                             <th>Aksi</th>
                             </tr>
                         </thead>
